@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.versatel.noc.vsafe.client</groupId>
+    <artifactId>vsafe_client</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--<packaging>jar</packaging>-->
+
+    <name>vsafe_client</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <!--repository>
+            <id>my-internal-repository</id>
+            <url>http://myserver:8081/repo</url>
+        </repository-->
+
+        <!-- Override super-pom Central repository and make it to show some empty folder for example -->
+   </repositories>
+
+    <pluginRepositories>
+        <!--pluginRepository>
+            <id>my-internal-repository</id>
+            <url>http://myserver:8081/repo</url>
+        </pluginRepository-->
+
+        <!-- Override super-pom Central repository and make it to show some empty folder for example -->
+        <pluginRepository>
+            <id>central</id>
+            <!-- An Empty folder for example. -->
+            <url>M:/java/maven/.m2/repository</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+  
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>vsafe_client_core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>
